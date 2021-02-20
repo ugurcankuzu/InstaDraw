@@ -11,7 +11,7 @@ cekilis = input("Lütfen Çekiliş postunun linkini yapıştırın: ")
 kullanici_adi = input("Lütfen İnstagram kullanıcı adınızı giriniz: ")
 sifre = input("Lütfen İnstagram Şifrenizi Yazınız: ")
 
-driver = webdriver.Chrome("/Users/ugurcan/Desktop/chromedriver")
+driver = webdriver.Chrome("/Chrome/driver/Path")
 driver.get('https://www.instagram.com/')
 time.sleep(1.2)
 driver.find_element_by_name("username").send_keys(kullanici_adi)
@@ -53,8 +53,8 @@ a=0
 L = instaloader.Instaloader()
 L.login(kullanici_adi,sifre)
 
-profil = instaloader.Profile.from_username(L.context,"deuyapi")
-post = instaloader.Post.from_shortcode(L.context,'CIyZcMghfyp')
+profil = instaloader.Profile.from_username(L.context,"PageUserName")
+post = instaloader.Post.from_shortcode(L.context,'/p/justPasteThisShortCodeWithout"/p/"')
 
 post_likes = post.get_likes()
 follower = []
